@@ -7,9 +7,9 @@ int main() {
     srand(time(NULL));
     printf ("welcome to number guessing game\n");
     random = rand() % 100 + 1;
+      printf ("\n please enter your number between 1 to 100: ");
 
     do {
-      printf ("\n please enter your number between 1 to 100: ");
       scanf ("%d",&guess);
       no_of_guess++;
       
@@ -29,5 +29,6 @@ int main() {
       printf ("(developed by @garvit33 XD)");
 
       return 0;
+
 
 }
