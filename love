@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Surprise</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; background:pink; margin:0;">
+
+<!-- PAGE 1 -->
+<div id="page1" style="padding-top:150px;">
+<h1>Hello my name is Love Kishor Chauniyal ❤️</h1>
+<p>There is a surprise for you 🥰</p>
+
+<button id="openBtn" style="padding:10px 20px; font-size:18px;">
+Click Here
+</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" style="display:none; padding-top:150px;">
+<h1>Will you be my Valentine? ❤️</h1>
+
+<button id="yesBtn"
+style="padding:10px 20px; background:red; color:white; font-size:18px;">
+Yes
+</button>
+
+<button id="noBtn"
+style="padding:10px 20px; background:black; color:white; position:absolute; font-size:18px;">
+No
+</button>
+
+</div>
+
+<!-- YAY SCREEN -->
+<div id="yay"
+style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+background:#ff4da6; color:white; font-size:40px;
+justify-content:center; align-items:center; flex-direction:column;">
+<div>Yay 🥳</div>
+<div style="font-size:25px;">Thank You ❤️</div>
+</div>
+
+<script>
+
+// BUTTON CONNECT
+document.getElementById("openBtn").onclick = function(){
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").style.display="block";
+}
+
+// YES BUTTON
+document.getElementById("yesBtn").onclick = function(){
+document.getElementById("yay").style.display="flex";
+}
+
+// NO BUTTON MOVE
+var noBtn = document.getElementById("noBtn");
+
+noBtn.onmouseover = function(){
+var x = Math.random() * (window.innerWidth - 100);
+var y = Math.random() * (window.innerHeight - 50);
+noBtn.style.left = x + "px";
+noBtn.style.top = y + "px";
+}
+
+</script>
+
+</body>
+</html>
